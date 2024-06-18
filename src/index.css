@@ -1,0 +1,51 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.table-title {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  margin-inline: auto;
+  margin-top: 9%;
+  place-content: center;
+  padding: 50px;
+}
+
+.profile-card__header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-card__header h1 {
+  padding-left: 20px;
+}
+
+.people-table {
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+.paginate-table {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.message-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+img {
+  border-radius: 50%;
+}
