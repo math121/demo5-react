@@ -49,3 +49,17 @@ body {
 img {
   border-radius: 50%;
 }
+
+.pagination {
+  padding: 10px;
+  padding-top: 35px;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+}
+
+span {
+  padding: 8px;
+  margin: 15px;
+  font-size: large;
+  cursor: pointer;
+}

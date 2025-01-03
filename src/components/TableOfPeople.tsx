@@ -5,7 +5,7 @@ import {
   TableHead,
   TableRow,
   TableCell,
-  Pagination,
+  // Pagination,
 } from "@mui/material";
 import "../index.css";
 
@@ -13,6 +13,7 @@ import dummyData from "../dummy_data/dummy_data.json";
 import ProfileCard from "./ProfileCard";
 import { useState } from "react";
 import { ProfileDetails } from "../dataTypes/data_types";
+import { CustomPagination } from "./CustomPagination";
 
 function TableOfPeople() {
   const [showProfile, setShowProfile] = useState(false);
@@ -37,7 +38,7 @@ function TableOfPeople() {
     setClickedProfile(details);
   };
 
-  const changeContentInTable = (_e: unknown, pageNumber: number) => {
+  const changeContentInTable = (pageNumber: number) => {
     setDisplayData(
       dummyData.slice(rowsPerPage * (pageNumber - 1), rowsPerPage * pageNumber)
     );
@@ -50,7 +51,7 @@ function TableOfPeople() {
         <Table className="people-table">
           <TableHead>
             <TableRow>
-              <TableCell align="center">Profile Image</TableCell>
+              <TableCell align="center">Profile Images</TableCell>
               <TableCell align="center">Name</TableCell>
               <TableCell align="center">Email</TableCell>
             </TableRow>
@@ -80,11 +81,16 @@ function TableOfPeople() {
         </Table>
       </TableContainer>
 
-      <Pagination
+      {/* <Pagination
         className="paginate-table"
         count={pages}
         onChange={(e, pageNumber) => changeContentInTable(e, pageNumber)}
-      ></Pagination>
+      ></Pagination> */}
+
+      <CustomPagination
+        numPages={pages}
+        changeContent={changeContentInTable}
+      ></CustomPagination>
 
       <ProfileCard
         props={clickedProfile}
